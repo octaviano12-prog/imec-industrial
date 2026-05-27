@@ -1,0 +1,8 @@
+node_modules/
+.npm-cache/
+.env
+storage/uploads/*
+!storage/uploads/.gitkeep
+storage/*.local.json
+publicacao-github/
+publicacao-github.zip
