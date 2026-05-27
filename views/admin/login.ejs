@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %> | IMEC</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/admin.css?v=3">
+  </head>
+  <body class="login-page">
+    <div class="login-brand">
+      <img src="/assets/official/logo.png" alt="IMEC Metalúrgica">
+      <p>Painel administrativo</p>
+    </div>
+    <main class="login-card">
+      <p class="admin-kicker">Acesso seguro</p>
+      <h1>Administração do site</h1>
+      <p>Gerencie textos, equipamentos, projetos, fotos e vídeos.</p>
+      <% if (flash && flash.type === "error") { %>
+        <div class="admin-alert error"><%= flash.message %></div>
+      <% } %>
+      <% if (previewCredentials) { %>
+        <div class="preview-login">
+          <strong>Acesso da prévia</strong>
+          <span><%= previewCredentials.email %></span>
+          <span>Senha: <%= previewCredentials.password %></span>
+        </div>
+      <% } %>
+      <form action="/admin/login" method="post">
+        <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+        <label>E-mail<input type="email" name="email" required></label>
+        <label>Senha<input type="password" name="password" required></label>
+        <button type="submit">Entrar</button>
+      </form>
+      <a class="back-site" href="/">Voltar ao site</a>
+    </main>
+  </body>
+</html>

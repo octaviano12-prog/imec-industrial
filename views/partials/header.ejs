@@ -1,0 +1,25 @@
+    <header class="masthead" id="masthead">
+      <div class="masthead-utility">
+        <div class="shell utility-row">
+          <span>Fabricação</span><span>Reformas e retrofit</span><span>Montagem industrial</span>
+          <a href="tel:+55<%= site.company.phone.replace(/\D/g, '') %>"><%= site.company.phone %></a>
+        </div>
+      </div>
+      <div class="shell masthead-main">
+        <a class="identity" href="/" aria-label="IMEC Metalúrgica, página inicial">
+          <img src="<%= site.company.logo %>" alt="<%= site.company.name %>">
+        </a>
+        <button class="nav-trigger" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span>
+          <b>Menu</b>
+        </button>
+        <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+          <a class="<%= active === 'company' ? 'active' : '' %>" href="/empresa">Empresa</a>
+          <a class="<%= active === 'solutions' ? 'active' : '' %>" href="/equipamentos">Equipamentos</a>
+          <a class="<%= active === 'services' ? 'active' : '' %>" href="/reformas-servicos">Reformas e Serviços</a>
+          <a class="<%= active === 'markets' ? 'active' : '' %>" href="/setores-clientes">Setores</a>
+          <a class="<%= active === 'projects' ? 'active' : '' %>" href="/projetos">Projetos</a>
+          <a class="nav-cta <%= active === 'contact' ? 'active' : '' %>" href="/contato">Solicite uma cotação</a>
+        </nav>
+      </div>
+    </header>

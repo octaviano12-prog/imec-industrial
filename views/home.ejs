@@ -1,0 +1,84 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+
+    <main id="main">
+      <section class="ref-hero">
+        <div class="hero-background">
+          <% if (site.home.heroVideo) { %>
+            <video autoplay muted loop playsinline src="<%= site.home.heroVideo %>"></video>
+          <% } else { %>
+            <img src="<%= site.home.heroMedia %>" alt="">
+          <% } %>
+        </div>
+        <div class="shell ref-hero-inner">
+          <div class="ref-hero-content">
+            <p class="eyebrow reveal"><%= site.home.eyebrow %></p>
+            <h1 class="reveal"><%= site.home.title %> <em><%= site.home.titleAccent %></em></h1>
+            <p class="ref-hero-lead reveal"><%= site.home.subtitle %></p>
+            <div class="ref-buttons reveal">
+              <a class="pill pill-red" href="/contato">Solicitar orçamento</a>
+              <a class="pill pill-line" href="/reformas-servicos">Ver reformas e serviços</a>
+            </div>
+          </div>
+        </div>
+        <div class="shell ref-capabilities">
+          <% [
+            ["Experiência em campo", "Equipe preparada para montagem, reforma e manutenção."],
+            ["Estrutura fabril", "Capacidade para equipamentos industriais de grande porte."],
+            ["Engenharia aplicada", "Soluções dimensionadas para o processo da usina."],
+            ["Segurança e qualidade", "Foco em segurança industrial, prazo e desempenho."]
+          ].forEach((item, index) => { %>
+            <article class="reveal">
+              <span class="ref-icon">0<%= index + 1 %></span>
+              <div><h2><%= item[0] %></h2><p><%= item[1] %></p></div>
+            </article>
+          <% }) %>
+        </div>
+      </section>
+
+      <section class="ref-intro" id="caminhos">
+        <div class="shell ref-intro-grid">
+          <div class="reveal">
+            <p class="eyebrow dark">Experiência industrial</p>
+            <h2>Projetada para<br> usinas.<br> Entregue em<br> <em>campo.</em></h2>
+          </div>
+          <div class="ref-intro-copy reveal">
+            <p><%= site.home.introText %></p>
+            <a class="outline-action" href="/reformas-servicos">Conheça nossos serviços <span>+</span></a>
+          </div>
+          <img class="ref-intro-image reveal" src="<%= site.home.featureReformMedia %>" alt="Profissional IMEC atuando em equipamento industrial">
+        </div>
+      </section>
+
+      <section class="ref-portals">
+        <div class="shell ref-portal-grid">
+          <a class="ref-portal reveal" href="/equipamentos">
+            <img src="<%= site.home.featureManufacturingMedia %>" alt="">
+            <div><span>Equipamentos</span><h3>Fabricação industrial</h3><p>Soluções robustas para processos exigentes.</p><b>Saiba mais &nbsp; +</b></div>
+          </a>
+          <a class="ref-portal reveal" href="/reformas-servicos">
+            <img src="<%= site.home.featureReformMedia %>" alt="">
+            <div><span>Serviços</span><h3>Reformas e retrofit</h3><p>Reformas com precisão para máxima confiabilidade.</p><b>Saiba mais &nbsp; +</b></div>
+          </a>
+          <a class="ref-portal reveal" href="/projetos">
+            <img src="<%= site.home.processMedia %>" alt="">
+            <div><span>Mídia</span><h3>Galeria de projetos</h3><p>Conheça projetos executados pela IMEC.</p><b>Saiba mais &nbsp; +</b></div>
+          </a>
+        </div>
+      </section>
+
+      <section class="ref-proof">
+        <div class="shell ref-proof-grid reveal">
+          <% site.home.numbers.forEach((number, index) => { %>
+            <article>
+              <span class="ref-proof-icon">0<%= index + 1 %></span>
+              <div><strong class="count"><%= number.value %></strong><b><%= number.label %></b><p><%= index === 0 ? "Atuação em usinas e indústrias" : index === 1 ? "Mais de 25 anos de história" : index === 2 ? "Capacidade fabril ampliada" : "Credibilidade para projetos" %></p></div>
+            </article>
+          <% }) %>
+        </div>
+      </section>
+
+      <%- include("partials/cta") %>
+    </main>
+
+<%- include("partials/footer") %>

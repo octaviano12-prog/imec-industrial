@@ -1,0 +1,38 @@
+    <footer class="footer">
+      <div class="shell footer-grid">
+        <div class="footer-brand">
+          <img src="<%= site.company.logo %>" alt="<%= site.company.name %>">
+          <p>Fabricação, reforma e serviços industriais para açúcar, etanol e energia.</p>
+        </div>
+        <div class="footer-links">
+          <p class="footer-label">Site</p>
+          <a href="/empresa">Empresa</a>
+          <a href="/equipamentos">Equipamentos</a>
+          <a href="/reformas-servicos">Reformas e Serviços</a>
+          <a href="/setores-clientes">Setores e Clientes</a>
+          <a href="/projetos">Projetos</a>
+        </div>
+        <div class="footer-contact">
+          <p class="footer-label">Contato</p>
+          <a href="tel:+55<%= site.company.phone.replace(/\D/g, '') %>"><%= site.company.phone %></a>
+          <a href="mailto:<%= site.company.email %>"><%= site.company.email %></a>
+          <p><%= site.company.address %></p>
+          <div class="footer-social">
+            <a href="<%= site.company.instagram %>" target="_blank" rel="noopener noreferrer">Instagram</a>
+            <a href="<%= site.company.linkedin %>" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+        <div class="footer-cert">
+          <p class="footer-label">Credenciamento</p>
+          <img src="/assets/official/logo-bndes.png" alt="BNDES">
+          <strong>Fornecedor credenciado</strong>
+        </div>
+      </div>
+      <div class="shell footer-bottom">
+        <span>&copy; <%= new Date().getFullYear() %> IMEC Metalúrgica</span>
+        <a href="/admin">Acesso administrativo</a>
+      </div>
+    </footer>
+    <script src="/static/js/site.js?v=4"></script>
+  </body>
+</html>

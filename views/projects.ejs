@@ -1,0 +1,31 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+    <main id="main">
+      <section class="projects-heading">
+        <div class="shell">
+          <p class="eyebrow dark">Projetos / Fotos / Vídeos</p>
+          <h1 class="display dark-display"><%= site.projectsPage.title %></h1>
+          <p class="copy"><%= site.projectsPage.intro %></p>
+        </div>
+      </section>
+
+      <section class="project-gallery">
+        <div class="shell project-grid">
+          <% site.projectsPage.gallery.forEach((item, index) => { %>
+            <article class="project-tile tile-<%= index %> reveal">
+              <% if (item.type === "video") { %>
+                <video controls playsinline src="<%= item.src %>"></video>
+              <% } else { %>
+                <img src="<%= item.src %>" alt="<%= item.title %>">
+              <% } %>
+              <div>
+                <span><%= item.tag %></span>
+                <h2><%= item.title %></h2>
+              </div>
+            </article>
+          <% }) %>
+        </div>
+      </section>
+      <%- include("partials/cta") %>
+    </main>
+<%- include("partials/footer") %>

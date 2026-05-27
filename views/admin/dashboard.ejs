@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title><%= title %> | IMEC</title>
+    <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/admin.css?v=3">
+    <meta name="csrf-token" content="<%= csrfToken %>">
+  </head>
+  <body class="admin-page">
+    <header class="admin-top">
+      <div class="admin-identity">
+        <img src="<%= site.company.logo %>" alt="IMEC">
+        <div><strong>Painel IMEC</strong><span><%= storageDriver === "mysql" ? "MySQL ativo" : "Modo de prévia local" %></span></div>
+      </div>
+      <div class="top-actions">
+        <span class="status" id="save-status">Sem alterações</span>
+        <a href="/" target="_blank">Ver site</a>
+        <form action="/admin/logout" method="post">
+          <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+          <button type="submit">Sair</button>
+        </form>
+        <button class="save" id="save" type="button">Salvar site</button>
+      </div>
+    </header>
+
+    <div class="dashboard">
+      <aside class="admin-nav">
+        <a href="#home">Início</a>
+        <a href="#empresa">Empresa</a>
+        <a href="#equipamentos">Equipamentos</a>
+        <a href="#servicos">Reformas e serviços</a>
+        <a href="#projetos">Projetos e mídias</a>
+        <a href="#contato">Contato</a>
+        <a href="#mensagens">Mensagens</a>
+      </aside>
+      <main class="workspace">
+        <div class="mode-note">
+          <% if (storageDriver === "file") { %>
+            Esta demonstração salva alterações e uploads no computador. Na publicação, altere para MySQL no arquivo de configuração.
+          <% } else { %>
+            Site conectado ao banco MySQL. Alterações salvas ficam disponíveis publicamente após salvar.
+          <% } %>
+        </div>
+
+        <section class="edit-block" id="home">
+          <header><p>Home</p><h1>Apresentação principal</h1></header>
+          <div class="field-grid">
+            <label class="full">Chamada superior<input data-field="home.eyebrow"></label>
+            <label class="full">Título principal<textarea data-field="home.title" rows="2"></textarea></label>
+            <label class="full">Palavra em destaque no título<input data-field="home.titleAccent"></label>
+            <label class="full">Descrição<textarea data-field="home.subtitle" rows="3"></textarea></label>
+            <label class="full">Título de apresentação<input data-field="home.introTitle"></label>
+            <label class="full">Texto de apresentação<textarea data-field="home.introText" rows="3"></textarea></label>
+            <label>Telefone<input data-field="company.phone"></label>
+            <label>E-mail<input data-field="company.email"></label>
+            <label class="full">Endereço<input data-field="company.address"></label>
+          </div>
+          <div class="media-line">
+            <img id="home-media-preview" alt="Imagem principal">
+            <div>
+              <strong>Imagem ou vídeo principal</strong>
+              <p>Uma mídia impactante para abrir o site. Vídeo, se inserido, terá prioridade.</p>
+              <label class="upload">Trocar imagem<input type="file" accept="image/*" data-upload="home.heroMedia"></label>
+              <label class="upload neutral">Enviar vídeo<input type="file" accept="video/*" data-upload="home.heroVideo"></label>
+              <button class="text-action" type="button" data-clear="home.heroVideo">Retirar vídeo</button>
+            </div>
+          </div>
+          <div class="field-grid">
+            <label>Título da fabricação<input data-field="home.featureManufacturingTitle"></label>
+            <label>Título da reforma<input data-field="home.featureReformTitle"></label>
+            <label>Texto da fabricação<textarea data-field="home.featureManufacturingText" rows="2"></textarea></label>
+            <label>Texto da reforma<textarea data-field="home.featureReformText" rows="2"></textarea></label>
+            <label class="full">Título de setores e processos<input data-field="home.processTitle"></label>
+          </div>
+          <div class="feature-upload-grid">
+            <div class="media-line small">
+              <img id="manufacturing-media-preview" alt="Imagem de fabricação">
+              <label class="upload">Foto de fabricação<input type="file" accept="image/*" data-upload="home.featureManufacturingMedia"></label>
+            </div>
+            <div class="media-line small">
+              <img id="reform-media-preview" alt="Imagem de reforma">
+              <label class="upload">Foto de reforma<input type="file" accept="image/*" data-upload="home.featureReformMedia"></label>
+            </div>
+            <div class="media-line small">
+              <img id="process-media-preview" alt="Imagem de processos">
+              <label class="upload">Foto de processos<input type="file" accept="image/*" data-upload="home.processMedia"></label>
+            </div>
+          </div>
+          <div class="repeater-head"><h2>Linhas de atuação</h2><button data-add="statements" type="button">Adicionar</button></div>
+          <div class="compact-grid" id="statements-editor"></div>
+          <div class="repeater-head"><h2>Números</h2><button data-add="numbers" type="button">Adicionar</button></div>
+          <div class="compact-grid" id="numbers-editor"></div>
+        </section>
+
+        <section class="edit-block" id="empresa">
+          <header><p>Página</p><h2>Empresa e trajetória</h2></header>
+          <div class="field-grid">
+            <label class="full">Título<input data-field="companyPage.title"></label>
+            <label class="full">Introdução<textarea data-field="companyPage.intro" rows="3"></textarea></label>
+            <label class="full">Missão<textarea data-field="companyPage.mission" rows="2"></textarea></label>
+            <label class="full">Visão<textarea data-field="companyPage.vision" rows="2"></textarea></label>
+          </div>
+          <div class="media-line small">
+            <img id="company-media-preview" alt="Imagem da página empresa">
+            <label class="upload">Trocar foto de capa<input type="file" accept="image/*" data-upload="companyPage.heroMedia"></label>
+          </div>
+          <div class="repeater-head"><h2>Valores</h2><button data-add="values" type="button">Adicionar</button></div>
+          <div class="compact-grid" id="values-editor"></div>
+          <div class="repeater-head"><h2>Marcos históricos</h2><button data-add="timeline" type="button">Adicionar</button></div>
+          <div class="stack" id="timeline-editor"></div>
+        </section>
+
+        <section class="edit-block" id="equipamentos">
+          <header><p>Página</p><h2>Equipamentos</h2></header>
+          <div class="field-grid">
+            <label class="full">Título<input data-field="solutionsPage.title"></label>
+            <label class="full">Introdução<textarea data-field="solutionsPage.intro" rows="3"></textarea></label>
+          </div>
+          <div class="media-line small">
+            <img id="solutions-media-preview" alt="Imagem da página equipamentos">
+            <label class="upload">Trocar foto de capa<input type="file" accept="image/*" data-upload="solutionsPage.heroMedia"></label>
+          </div>
+          <div class="repeater-head"><h2>Categorias e equipamentos</h2><button data-add="category" type="button">Adicionar</button></div>
+          <div class="stack" id="categories-editor"></div>
+        </section>
+
+        <section class="edit-block" id="servicos">
+          <header><p>Página</p><h2>Reformas e serviços</h2></header>
+          <div class="field-grid">
+            <label class="full">Título<input data-field="servicesPage.title"></label>
+            <label class="full">Introdução<textarea data-field="servicesPage.intro" rows="3"></textarea></label>
+          </div>
+          <div class="media-line small">
+            <img id="service-media-preview" alt="Imagem de reformas">
+            <label class="upload">Trocar foto da página<input type="file" accept="image/*" data-upload="servicesPage.heroMedia"></label>
+          </div>
+          <div class="repeater-head"><h2>Páginas individuais de serviços</h2><button data-add="service" type="button">Adicionar</button></div>
+          <p class="editor-help">Cada serviço abaixo possui página própria. Envie fotos ou vídeos na galeria da respectiva página.</p>
+          <div class="stack" id="services-editor"></div>
+          <div class="repeater-head"><h2>Diferenciais</h2><button data-add="differentials" type="button">Adicionar</button></div>
+          <div class="compact-grid" id="differentials-editor"></div>
+        </section>
+
+        <section class="edit-block" id="projetos">
+          <header><p>Página</p><h2>Projetos, fotos e vídeos</h2></header>
+          <div class="field-grid">
+            <label class="full">Título<input data-field="projectsPage.title"></label>
+            <label class="full">Introdução<textarea data-field="projectsPage.intro" rows="2"></textarea></label>
+          </div>
+          <div class="repeater-head">
+            <h2>Galeria</h2>
+            <button data-add="gallery" type="button">Adicionar mídia</button>
+          </div>
+          <div class="media-cards" id="gallery-editor"></div>
+        </section>
+
+        <section class="edit-block" id="contato">
+          <header><p>Página</p><h2>Contato e links</h2></header>
+          <div class="field-grid">
+            <label class="full">Título<input data-field="contactPage.title"></label>
+            <label class="full">Descrição<textarea data-field="contactPage.intro" rows="2"></textarea></label>
+            <label>Texto do botão do formulário<input data-field="contactPage.cta"></label>
+            <label>Tempo de mercado / desde<input data-field="company.since"></label>
+            <label class="full">Título da chamada final<input data-field="contactPage.bandTitle"></label>
+            <label>Legenda da chamada final<input data-field="contactPage.bandEyebrow"></label>
+            <label>Botão da chamada final<input data-field="contactPage.bandButton"></label>
+            <label>Instagram<input data-field="company.instagram"></label>
+            <label>LinkedIn<input data-field="company.linkedin"></label>
+            <label class="full">Link do catálogo<input data-field="company.catalog"></label>
+          </div>
+          <div class="media-line small">
+            <img id="logo-media-preview" alt="Logotipo">
+            <label class="upload">Trocar logotipo<input type="file" accept="image/*" data-upload="company.logo"></label>
+          </div>
+          <div class="repeater-head"><h2>Setores atendidos</h2><button data-add="markets" type="button">Adicionar</button></div>
+          <div class="compact-grid" id="markets-editor"></div>
+          <div class="repeater-head"><h2>Clientes em destaque</h2><button data-add="client" type="button">Adicionar</button></div>
+          <div class="stack" id="clients-editor"></div>
+        </section>
+
+        <section class="edit-block inbox" id="mensagens">
+          <header><p>Recebidos</p><h2>Solicitações de contato</h2></header>
+          <% if (!messages.length) { %>
+            <p class="empty">Ainda não há mensagens recebidas.</p>
+          <% } %>
+          <% messages.forEach((message) => { %>
+            <article class="message">
+              <div>
+                <strong><%= message.name %></strong>
+                <span><%= message.email %> <% if (message.phone) { %> / <%= message.phone %><% } %></span>
+              </div>
+              <b><%= message.subject %></b>
+              <p><%= message.message %></p>
+            </article>
+          <% }) %>
+        </section>
+      </main>
+    </div>
+    <script type="application/json" id="initial-content"><%- contentJson %></script>
+    <script src="/static/js/admin.js?v=3"></script>
+  </body>
+</html>

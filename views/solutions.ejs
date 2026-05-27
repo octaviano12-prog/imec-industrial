@@ -1,0 +1,33 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+    <main id="main">
+      <section class="inner-hero equipment-hero">
+        <div class="inner-media"><img src="<%= site.solutionsPage.heroMedia %>" alt=""></div>
+        <div class="shell inner-hero-grid">
+          <p class="eyebrow">Equipamentos</p>
+          <h1 class="display"><%= site.solutionsPage.title %></h1>
+          <p class="inner-lead"><%= site.solutionsPage.intro %></p>
+          <a class="pill pill-red" href="<%= site.company.catalog %>" target="_blank" rel="noopener noreferrer">Baixar catálogo</a>
+        </div>
+      </section>
+
+      <section class="solution-catalog">
+        <div class="shell catalog-grid">
+          <% site.solutionsPage.categories.forEach((category, index) => { %>
+            <article class="catalog-item reveal">
+              <div class="catalog-media"><img src="<%= category.image %>" alt=""></div>
+              <div class="catalog-content">
+                <span>0<%= index + 1 %></span>
+                <h2><%= category.title %></h2>
+                <p><%= category.text %></p>
+                <ul>
+                  <% category.items.forEach((item) => { %><li><%= item %></li><% }) %>
+                </ul>
+              </div>
+            </article>
+          <% }) %>
+        </div>
+      </section>
+      <%- include("partials/cta") %>
+    </main>
+<%- include("partials/footer") %>

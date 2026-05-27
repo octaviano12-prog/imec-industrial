@@ -1,0 +1,46 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+    <main id="main">
+      <section class="contact-page">
+        <div class="shell contact-layout">
+          <div class="contact-header">
+            <p class="eyebrow dark">Contato</p>
+            <h1 class="display dark-display"><%= site.contactPage.title %></h1>
+            <p class="copy"><%= site.contactPage.intro %></p>
+            <div class="direct-contact">
+              <a href="tel:+55<%= site.company.phone.replace(/\D/g, '') %>"><span>Telefone</span><strong><%= site.company.phone %></strong></a>
+              <a class="whatsapp" href="https://wa.me/55<%= site.company.phone.replace(/\D/g, '') %>" target="_blank" rel="noopener noreferrer"><span>Atendimento</span><strong>Falar pelo WhatsApp</strong></a>
+              <a href="mailto:<%= site.company.email %>"><span>E-mail</span><strong><%= site.company.email %></strong></a>
+              <p><span>Localização</span><strong><%= site.company.address %></strong></p>
+            </div>
+          </div>
+          <form class="lead-form" action="/contato" method="post">
+            <input type="hidden" name="_csrf" value="<%= csrfToken %>">
+            <% if (sent) { %>
+              <div class="success">Mensagem enviada. A equipe comercial poderá retornar seu contato.</div>
+            <% } %>
+            <% if (flash && flash.type === "error") { %>
+              <div class="form-error"><%= flash.message %></div>
+            <% } %>
+            <label>Nome<input name="name" type="text" required></label>
+            <label>Empresa<input name="company" type="text"></label>
+            <div class="form-double">
+              <label>E-mail<input name="email" type="email" required></label>
+              <label>Telefone<input name="phone" type="tel"></label>
+            </div>
+            <label>Assunto
+              <select name="subject">
+                <option>Fabricação de equipamento</option>
+                <option>Reforma ou retrofit</option>
+                <option>Montagem industrial</option>
+                <option>Manutenção e suporte</option>
+                <option>Outro assunto</option>
+              </select>
+            </label>
+            <label>Mensagem<textarea name="message" rows="6" required></textarea></label>
+            <button class="pill pill-red" type="submit"><%= site.contactPage.cta %></button>
+          </form>
+        </div>
+      </section>
+    </main>
+<%- include("partials/footer") %>

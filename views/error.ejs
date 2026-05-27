@@ -1,0 +1,11 @@
+<%- include("partials/head", { active: "error" }) %>
+<%- include("partials/header", { active: "error" }) %>
+    <main id="main" class="error-page">
+      <div class="shell">
+        <p class="eyebrow dark">Erro</p>
+        <h1 class="display dark-display"><%= title %></h1>
+        <p class="copy"><%= message %></p>
+        <a class="pill pill-red" href="/">Voltar ao início</a>
+      </div>
+    </main>
+<%- include("partials/footer") %>

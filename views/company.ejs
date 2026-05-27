@@ -1,0 +1,44 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+    <main id="main">
+      <section class="inner-hero company-hero">
+        <div class="inner-media"><img src="<%= site.companyPage.heroMedia %>" alt=""></div>
+        <div class="shell inner-hero-grid">
+          <p class="eyebrow">Empresa / desde <%= site.company.since %></p>
+          <h1 class="display"><%= site.companyPage.title %></h1>
+          <p class="inner-lead"><%= site.companyPage.intro %></p>
+        </div>
+      </section>
+
+      <section class="section-white pillars">
+        <div class="shell pillars-grid">
+          <article class="reveal"><span>Missão</span><p><%= site.companyPage.mission %></p></article>
+          <article class="reveal"><span>Visão</span><p><%= site.companyPage.vision %></p></article>
+          <article class="reveal">
+            <span>Valores</span>
+            <ul>
+              <% site.companyPage.values.forEach((value) => { %><li><%= value %></li><% }) %>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <section class="timeline-section">
+        <div class="shell timeline-layout">
+          <div class="sticky-title reveal">
+            <p class="eyebrow">Trajetória</p>
+            <h2 class="title">Uma história no setor sucroalcooleiro.</h2>
+          </div>
+          <div class="timeline-list">
+            <% site.companyPage.timeline.forEach((milestone) => { %>
+              <article class="timeline-row reveal">
+                <strong><%= milestone.year %></strong>
+                <div><h3><%= milestone.title %></h3><p><%= milestone.text %></p></div>
+              </article>
+            <% }) %>
+          </div>
+        </div>
+      </section>
+      <%- include("partials/cta") %>
+    </main>
+<%- include("partials/footer") %>

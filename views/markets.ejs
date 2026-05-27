@@ -1,0 +1,40 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+    <main id="main">
+      <section class="inner-hero markets-hero">
+        <div class="inner-media"><img src="<%= site.home.processMedia %>" alt=""></div>
+        <div class="shell inner-hero-grid">
+          <p class="eyebrow">Setores e Clientes</p>
+          <h1 class="display">Presença em operações industriais essenciais.</h1>
+          <p class="inner-lead">Experiência aplicada em açúcar, etanol, energia e indústrias que dependem de equipamentos robustos e suporte técnico confiável.</p>
+        </div>
+      </section>
+
+      <section class="markets-section">
+        <div class="shell markets-layout">
+          <div class="markets-title reveal">
+            <p class="eyebrow dark">Segmentos atendidos</p>
+            <h2>Processos que exigem continuidade.</h2>
+          </div>
+          <div class="market-grid">
+            <% site.markets.forEach((market, index) => { %>
+              <article class="reveal"><span>0<%= index + 1 %></span><h3><%= market %></h3></article>
+            <% }) %>
+          </div>
+        </div>
+      </section>
+
+      <section class="market-clients">
+        <div class="shell section-heading compact reveal">
+          <p class="eyebrow dark">Relacionamentos apresentados pela IMEC</p>
+          <h2>Clientes atendidos</h2>
+        </div>
+        <div class="shell logo-grid reveal">
+          <% site.clients.forEach((client) => { %>
+            <div><img src="<%= client.image %>" alt="<%= client.name %>"></div>
+          <% }) %>
+        </div>
+      </section>
+      <%- include("partials/cta") %>
+    </main>
+<%- include("partials/footer") %>

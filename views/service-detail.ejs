@@ -1,0 +1,70 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+    <main id="main">
+      <section class="detail-hero">
+        <div class="detail-media"><img src="<%= service.heroMedia %>" alt="<%= service.title %>"></div>
+        <div class="shell detail-content">
+          <a class="back-link" href="/reformas-servicos">Reformas e serviços /</a>
+          <p class="eyebrow"><%= service.title %></p>
+          <h1 class="display"><%= service.title %></h1>
+          <p class="detail-lead"><%= service.description %></p>
+          <div class="detail-buttons">
+            <a class="pill pill-red" href="/contato">Solicitar este serviço</a>
+            <a class="pill pill-line" href="#galeria">Ver fotos e vídeos</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-statement">
+        <div class="shell detail-statement-grid">
+          <div>
+            <p class="eyebrow dark">Atuação especializada</p>
+            <p class="service-index">Serviço IMEC</p>
+          </div>
+          <div>
+            <h2><%= service.text %></h2>
+            <p><%= service.description %></p>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-method">
+        <div class="shell service-method-grid">
+          <div class="method-column reveal">
+            <p class="eyebrow dark">Como atuamos</p>
+            <% service.phases.forEach((phase, index) => { %>
+              <article><span>0<%= index + 1 %></span><h2><%= phase %></h2></article>
+            <% }) %>
+          </div>
+          <div class="method-column deliverables reveal">
+            <p class="eyebrow dark">Escopo e entregas</p>
+            <% service.deliverables.forEach((delivery) => { %>
+              <article><h2><%= delivery %></h2></article>
+            <% }) %>
+            <a class="pill pill-red" href="/contato">Consultar engenharia</a>
+          </div>
+        </div>
+      </section>
+
+      <section class="service-gallery" id="galeria">
+        <div class="shell section-heading reveal">
+          <p class="eyebrow dark">Fotos e vídeos / <%= service.title %></p>
+          <h2 class="title">Execução em destaque.</h2>
+          <p class="gallery-note">Publique fotos reais, vídeos de obras, reformas e equipamentos em operação diretamente pelo painel.</p>
+        </div>
+        <div class="shell service-media-grid">
+          <% service.gallery.forEach((media, index) => { %>
+            <article class="service-media media-<%= index + 1 %> reveal">
+              <% if (media.type === "video") { %>
+                <video controls playsinline src="<%= media.src %>"></video>
+              <% } else { %>
+                <img src="<%= media.src %>" alt="<%= media.title %>">
+              <% } %>
+              <div><small><%= media.type === "video" ? "Vídeo" : "Foto" %></small><span><%= media.title %></span></div>
+            </article>
+          <% }) %>
+        </div>
+      </section>
+      <%- include("partials/cta") %>
+    </main>
+<%- include("partials/footer") %>

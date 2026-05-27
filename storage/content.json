@@ -1,0 +1,415 @@
+{
+  "company": {
+    "name": "IMEC Metalúrgica",
+    "legalName": "IMEC Metalúrgica",
+    "since": "1998",
+    "phone": "(18) 3786-1272",
+    "email": "comercial@imecmetalurgica.com.br",
+    "address": "Rua Júlio Ventura, 655 - Sud Mennucci, SP",
+    "instagram": "https://www.instagram.com/imecmetalurgica/",
+    "linkedin": "https://www.linkedin.com/company/imecmetal%C3%BArgica/",
+    "logo": "/assets/official/logo.png",
+    "catalog": "/assets/official/catalogo-imec.pdf"
+  },
+  "home": {
+    "eyebrow": "Engenharia sucroenergética",
+    "title": "Engenharia que mantém a safra em",
+    "titleAccent": "movimento.",
+    "subtitle": "Equipamentos, reformas e execução industrial para plantas de açúcar, etanol e energia.",
+    "heroMedia": "/assets/premium/hero-grand-scale.jpg",
+    "heroVideo": "",
+    "introTitle": "Não entregamos apenas aço. Entregamos disponibilidade para produzir.",
+    "introText": "Da fabricação de equipamentos à reforma de unidades existentes, a IMEC atende operações industriais que precisam de resposta técnica, robustez e continuidade.",
+    "featureManufacturingTitle": "Equipamentos para açúcar e etanol",
+    "featureManufacturingText": "Colunas, tanques, evaporadores, caldeiras e estruturas.",
+    "featureManufacturingMedia": "/assets/premium/fabricacao.jpg",
+    "featureReformTitle": "Retrofit e recuperação industrial",
+    "featureReformText": "Modernização para recuperar eficiência e vida útil.",
+    "featureReformMedia": "/assets/premium/reforma.jpg",
+    "processTitle": "Tecnologia industrial para operações essenciais.",
+    "processMedia": "/assets/premium/planta.jpg",
+    "statements": [
+      "Engenharia aplicada",
+      "Experiência em campo",
+      "Estrutura fabril",
+      "Manutenção e suporte"
+    ],
+    "numbers": [
+      {
+        "value": "+100",
+        "label": "usinas atendidas"
+      },
+      {
+        "value": "1998",
+        "label": "início das atividades"
+      },
+      {
+        "value": "5.000 m²",
+        "label": "expansão fabril anunciada"
+      },
+      {
+        "value": "BNDES",
+        "label": "fornecedor credenciado"
+      }
+    ]
+  },
+  "companyPage": {
+    "heroMedia": "/assets/official/hero-3.jpg",
+    "title": "Uma metalúrgica criada dentro do desafio das usinas.",
+    "intro": "A IMEC nasceu em Sud Mennucci, na região noroeste de São Paulo, a partir da experiência de Edson Ribeiro e José Della Possa no setor sucroalcooleiro.",
+    "mission": "Oferecer soluções completas em produtos e serviços para desenvolver e aprimorar o cenário energético brasileiro.",
+    "vision": "Expandir em tamanho e variedade de serviços, participando da transformação energética brasileira.",
+    "values": [
+      "Superar expectativas de nossos clientes",
+      "Valorizar nossos colaboradores",
+      "Respeitar clientes e projetos",
+      "Agir com responsabilidade"
+    ],
+    "timeline": [
+      {
+        "year": "1998",
+        "title": "Primeiro retrofit",
+        "text": "Início das atividades e instalação de retrofit de aparelho de destilação para a Alcoeste."
+      },
+      {
+        "year": "2004",
+        "title": "Grande capacidade",
+        "text": "Fabricação de aparelho de destilação de álcool hidratado para 600 mil litros por dia."
+      },
+      {
+        "year": "2006",
+        "title": "Entrega integrada",
+        "text": "Caldeiras, transportadores de bagaço, tratamento de caldo e destilação para a Serra do Caiapó."
+      },
+      {
+        "year": "2022",
+        "title": "Nova expansão",
+        "text": "Investimento anunciado em nova fábrica com 5.000 m² de área fabril."
+      }
+    ]
+  },
+  "solutionsPage": {
+    "heroMedia": "/assets/premium/fabricacao.jpg",
+    "title": "Equipamentos desenvolvidos para produção e eficiência.",
+    "intro": "Da destilação à geração de vapor, a IMEC fornece equipamentos e plantas para operações industriais exigentes.",
+    "categories": [
+      {
+        "id": "destilacao",
+        "title": "Destilação e etanol",
+        "text": "Soluções para processamento de etanol combustível, neutro e especial.",
+        "items": [
+          "Colunas de destilação",
+          "Aparelhos de desidratação",
+          "Dornas de fermentação",
+          "Concentrador de levedura"
+        ],
+        "image": "/assets/premium/planta.jpg"
+      },
+      {
+        "id": "acucar",
+        "title": "Açúcar e processo",
+        "text": "Equipamentos para concentração, cozimento e tratamento do caldo.",
+        "items": [
+          "Evaporadores",
+          "Cozedores",
+          "Cristalizadores",
+          "Aquecedores e decantadores de caldo"
+        ],
+        "image": "/assets/official/equipamentos-e-plantas.jpg"
+      },
+      {
+        "id": "energia",
+        "title": "Vapor e energia",
+        "text": "Sistemas térmicos e acessórios para eficiência da operação.",
+        "items": [
+          "Caldeiras para geração de vapor",
+          "Economizadores",
+          "Superaquecedores",
+          "Lavadores de gás"
+        ],
+        "image": "/assets/premium/fabricacao.jpg"
+      },
+      {
+        "id": "estrutura",
+        "title": "Estrutura e movimentação",
+        "text": "Equipamentos robustos para armazenar e movimentar materiais.",
+        "items": [
+          "Tanques e silos",
+          "Elevadores de caneca",
+          "Esteiras metálicas e de borracha",
+          "Prédios metálicos"
+        ],
+        "image": "/assets/official/infraestrutura-e-energia.jpg"
+      }
+    ]
+  },
+  "servicesPage": {
+    "title": "Serviços para a safra não parar.",
+    "intro": "Reforma, montagem e manutenção industrial com resposta técnica para a operação da usina.",
+    "heroMedia": "/assets/premium/reforma.jpg",
+    "services": [
+      {
+        "slug": "reforma-retrofit",
+        "title": "Reforma e retrofit",
+        "text": "Recuperação e modernização de equipamentos industriais, inclusive estruturas e componentes críticos.",
+        "description": "Intervenções planejadas para recuperar integridade, capacidade e eficiência de equipamentos em operação, com diagnóstico técnico e execução em campo.",
+        "heroMedia": "/assets/premium/reforma.jpg",
+        "phases": [
+          "Diagnóstico técnico do equipamento",
+          "Plano de recuperação e modernização",
+          "Execução, montagem e entrega operacional"
+        ],
+        "deliverables": [
+          "Colunas e vasos",
+          "Evaporadores e trocadores",
+          "Estruturas e componentes críticos"
+        ],
+        "gallery": [
+          {
+            "type": "image",
+            "title": "Inspeção e recuperação",
+            "src": "/assets/premium/reforma.jpg"
+          },
+          {
+            "type": "image",
+            "title": "Equipe em campo",
+            "src": "/assets/official/hero-1.jpg"
+          },
+          {
+            "type": "image",
+            "title": "Detalhe de fabricação",
+            "src": "/assets/premium/fabricacao.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "montagem-industrial",
+        "title": "Montagem industrial",
+        "text": "Execução em campo para instalar equipamentos e integrar sistemas com segurança e precisão.",
+        "description": "Montagens para plantas sucroenergéticas com organização de obra, movimentação, posicionamento e integração de conjuntos industriais.",
+        "heroMedia": "/assets/official/montagem-industrial.jpg",
+        "phases": [
+          "Planejamento da atividade em campo",
+          "Içamento e posicionamento industrial",
+          "Integração e liberação da instalação"
+        ],
+        "deliverables": [
+          "Montagem de equipamentos",
+          "Estruturas metálicas",
+          "Interligações industriais"
+        ],
+        "gallery": [
+          {
+            "type": "image",
+            "title": "Montagem em planta",
+            "src": "/assets/official/montagem-industrial.jpg"
+          },
+          {
+            "type": "image",
+            "title": "Execução industrial",
+            "src": "/assets/official/hero-2.jpg"
+          },
+          {
+            "type": "image",
+            "title": "Escala de operação",
+            "src": "/assets/premium/planta.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "manutencao-equipamentos",
+        "title": "Manutenção de equipamentos",
+        "text": "Intervenções programadas para garantir disponibilidade, desempenho e vida útil.",
+        "description": "Atendimento técnico para paradas, reparos e conservação de equipamentos críticos, apoiando a continuidade da produção.",
+        "heroMedia": "/assets/official/manutencao-de-equipamentos.jpg",
+        "phases": [
+          "Avaliação da parada",
+          "Correção e substituição técnica",
+          "Retomada acompanhada da operação"
+        ],
+        "deliverables": [
+          "Manutenção preventiva",
+          "Correções emergenciais",
+          "Acompanhamento de desempenho"
+        ],
+        "gallery": [
+          {
+            "type": "image",
+            "title": "Manutenção técnica",
+            "src": "/assets/official/manutencao-de-equipamentos.jpg"
+          },
+          {
+            "type": "image",
+            "title": "Inspeção industrial",
+            "src": "/assets/premium/reforma.jpg"
+          },
+          {
+            "type": "image",
+            "title": "Atuação em equipamentos",
+            "src": "/assets/official/hero-3.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "projetos-suporte-tecnico",
+        "title": "Projetos e suporte técnico",
+        "text": "Engenharia aplicada com comunicação direta ao responsável técnico do projeto.",
+        "description": "Soluções de engenharia e acompanhamento próximo para desenvolver, adaptar e otimizar equipamentos e sistemas da usina.",
+        "heroMedia": "/assets/official/projetos.jpg",
+        "phases": [
+          "Entendimento da demanda",
+          "Engenharia e detalhamento",
+          "Suporte à implantação"
+        ],
+        "deliverables": [
+          "Projetos industriais",
+          "Adaptações de processo",
+          "Suporte técnico direto"
+        ],
+        "gallery": [
+          {
+            "type": "image",
+            "title": "Engenharia aplicada",
+            "src": "/assets/official/projetos.jpg"
+          },
+          {
+            "type": "image",
+            "title": "Planta industrial",
+            "src": "/assets/premium/planta.jpg"
+          },
+          {
+            "type": "image",
+            "title": "Fabricação planejada",
+            "src": "/assets/premium/fabricacao.jpg"
+          }
+        ]
+      },
+      {
+        "slug": "guinchos-munks",
+        "title": "Locação de guinchos e munks",
+        "text": "Suporte operacional para movimentação e montagem em atividades industriais.",
+        "description": "Estrutura para apoiar movimentações e montagens com agilidade nas demandas operacionais de campo.",
+        "heroMedia": "/assets/official/infraestrutura-e-energia.jpg",
+        "phases": [
+          "Programação da movimentação",
+          "Apoio à montagem",
+          "Finalização segura da atividade"
+        ],
+        "deliverables": [
+          "Movimentação de equipamentos",
+          "Suporte em campo",
+          "Apoio a montagens industriais"
+        ],
+        "gallery": [
+          {
+            "type": "image",
+            "title": "Movimentação industrial",
+            "src": "/assets/official/infraestrutura-e-energia.jpg"
+          },
+          {
+            "type": "image",
+            "title": "Operação em campo",
+            "src": "/assets/official/hero-1.jpg"
+          },
+          {
+            "type": "image",
+            "title": "Estrutura industrial",
+            "src": "/assets/official/hero-2.jpg"
+          }
+        ]
+      }
+    ],
+    "differentials": [
+      "Acompanhamento de performance após a entrega",
+      "Comunicação direta com o responsável pelo projeto",
+      "Fornecedor informado como credenciado pelo BNDES"
+    ]
+  },
+  "projectsPage": {
+    "title": "Aço, precisão e presença em campo.",
+    "intro": "Espaço para apresentar fabricação, reformas, montagens e resultados em fotos e vídeos.",
+    "gallery": [
+      {
+        "id": "obra-1",
+        "type": "image",
+        "title": "Fabricação de equipamento industrial",
+        "tag": "Fabricação",
+        "src": "/assets/premium/fabricacao.jpg"
+      },
+      {
+        "id": "obra-2",
+        "type": "image",
+        "title": "Recuperação e inspeção técnica",
+        "tag": "Reforma",
+        "src": "/assets/premium/reforma.jpg"
+      },
+      {
+        "id": "obra-3",
+        "type": "image",
+        "title": "Escala de planta sucroenergética",
+        "tag": "Plantas",
+        "src": "/assets/premium/planta.jpg"
+      },
+      {
+        "id": "obra-4",
+        "type": "image",
+        "title": "Execução industrial IMEC",
+        "tag": "Campo",
+        "src": "/assets/official/hero-1.jpg"
+      }
+    ]
+  },
+  "markets": [
+    "Açúcar e etanol",
+    "Cogeração de vapor e energia",
+    "Alimentos, sucos e bebidas",
+    "Biodiesel",
+    "Celulose e papel",
+    "Cervejarias",
+    "Frigoríficos",
+    "Fábricas de rações",
+    "Hidrogeração"
+  ],
+  "clients": [
+    {
+      "name": "Raízen",
+      "image": "/assets/official/clientes/raizen.jpg"
+    },
+    {
+      "name": "Adecoagro",
+      "image": "/assets/official/clientes/adecoagro.jpg"
+    },
+    {
+      "name": "Usina Santa Adélia",
+      "image": "/assets/official/clientes/usina-santa-adelia.jpg"
+    },
+    {
+      "name": "Coca-Cola",
+      "image": "/assets/official/clientes/coca-cola.jpg"
+    },
+    {
+      "name": "Alcoeste",
+      "image": "/assets/official/clientes/alcoeste.jpg"
+    },
+    {
+      "name": "Companhia Müller",
+      "image": "/assets/official/clientes/companhiamuller-de-bebidas.jpg"
+    },
+    {
+      "name": "Alda",
+      "image": "/assets/official/clientes/alda.jpg"
+    },
+    {
+      "name": "Usimat",
+      "image": "/assets/official/clientes/usimat.jpg"
+    }
+  ],
+  "contactPage": {
+    "title": "Coloque sua próxima demanda industrial em movimento.",
+    "intro": "Solicite uma cotação para fabricação, reforma, montagem ou manutenção de equipamentos.",
+    "cta": "Falar com o comercial",
+    "bandEyebrow": "Sua próxima demanda",
+    "bandTitle": "Equipamentos novos ou reforma da planta existente?",
+    "bandButton": "Conversar com a engenharia"
+  }
+}

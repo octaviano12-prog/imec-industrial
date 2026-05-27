@@ -1,0 +1,48 @@
+<%- include("partials/head") %>
+<%- include("partials/header") %>
+    <main id="main">
+      <section class="service-hero">
+        <div class="shell service-hero-grid">
+          <div class="service-head">
+            <p class="eyebrow dark">Reformas e Serviços</p>
+            <h1 class="display dark-display"><%= site.servicesPage.title %></h1>
+            <p class="copy"><%= site.servicesPage.intro %></p>
+          </div>
+          <img class="service-image" src="<%= site.servicesPage.heroMedia %>" alt="Reforma e inspeção de equipamento industrial">
+        </div>
+      </section>
+
+      <section class="service-listing">
+        <div class="shell service-showcase-grid">
+          <% site.servicesPage.services.forEach((service, index) => { %>
+            <a class="service-showcase reveal" href="/servicos/<%= service.slug %>">
+              <div class="service-showcase-media">
+                <img src="<%= service.heroMedia %>" alt="<%= service.title %>">
+                <span>0<%= index + 1 %></span>
+              </div>
+              <div class="service-showcase-copy">
+                <h2><%= service.title %></h2>
+                <p><%= service.text %></p>
+                <b><%= service.gallery.length %> mídias / Abrir fotos e vídeos</b>
+              </div>
+            </a>
+          <% }) %>
+        </div>
+      </section>
+
+      <section class="differentials">
+        <div class="shell differential-grid">
+          <div>
+            <p class="eyebrow">Por que IMEC</p>
+            <h2 class="title">Engenharia próxima da operação.</h2>
+          </div>
+          <div class="differential-list">
+            <% site.servicesPage.differentials.forEach((item) => { %>
+              <p class="reveal"><%= item %></p>
+            <% }) %>
+          </div>
+        </div>
+      </section>
+      <%- include("partials/cta") %>
+    </main>
+<%- include("partials/footer") %>
