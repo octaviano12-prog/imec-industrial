@@ -16,16 +16,16 @@
 
 .page-home .masthead-main {
   display: grid;
-  grid-template-columns: 205px 1fr 230px;
+  grid-template-columns: 185px 1fr 215px;
   align-items: center;
-  gap: 26px;
-  height: 86px;
+  gap: 22px;
+  height: 76px;
 }
 
 .page-home .identity {
   display: flex;
-  width: 152px;
-  height: 58px;
+  width: 138px;
+  height: 52px;
   align-items: center;
   padding: 0;
   background: transparent;
@@ -41,14 +41,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(18px, 1.45vw, 28px);
+  gap: clamp(16px, 1.35vw, 26px);
 }
 
 .page-home .site-nav > a {
   margin: 0;
-  padding: 18px 0;
+  padding: 16px 0;
   color: #eef5fb;
-  font-size: 0.92rem;
+  font-size: 0.86rem;
   line-height: 1;
   letter-spacing: 0.035em;
   font-weight: 900;
@@ -61,8 +61,8 @@
 
 .page-home .nav-cta-outside {
   display: inline-flex;
-  width: 198px;
-  height: 48px;
+  width: 186px;
+  height: 44px;
   align-items: center;
   justify-content: center;
   justify-self: end;
@@ -70,24 +70,24 @@
   background: linear-gradient(135deg, #ff214b 0%, #e11139 52%, #b30a29 100%);
   box-shadow: 0 12px 28px rgba(255, 23, 68, 0.22);
   color: #fff;
-  font-size: 0.78rem;
+  font-size: 0.74rem;
   font-weight: 900;
   letter-spacing: 0.01em;
   text-decoration: none;
   white-space: nowrap;
 }
 
-/* HERO domina a primeira dobra da tela */
+/* HERO domina a primeira dobra sem cortar o titulo */
 .page-home .industrial-hero {
   display: flex;
   width: 100vw;
   max-width: none;
-  min-height: calc(100vh - 86px);
+  min-height: calc(100vh - 76px);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   flex-direction: column;
   justify-content: center;
-  padding-top: 0;
+  padding-top: 76px;
   padding-bottom: 0;
 }
 
@@ -116,13 +116,13 @@
 
 .page-home .industrial-hero-content {
   max-width: 1440px;
-  transform: translateY(-28px);
+  transform: translateY(0);
 }
 
 .page-home .industrial-hero h1 {
-  max-width: 860px;
-  font-size: clamp(3.9rem, 5.15vw, 6.65rem);
-  line-height: 0.95;
+  max-width: 850px;
+  font-size: clamp(3.55rem, 4.75vw, 6.15rem);
+  line-height: 0.96;
 }
 
 .page-home .industrial-lead {
@@ -133,7 +133,7 @@
 
 .page-home .industrial-qualities {
   margin-top: 0;
-  transform: translateY(100px);
+  transform: translateY(86px);
 }
 
 .page-home .industrial-qualities article {
@@ -142,7 +142,7 @@
 }
 
 .page-home .industrial-stats {
-  padding-top: 130px;
+  padding-top: 118px;
 }
 
 .page-home .industrial-qualities h2,
@@ -186,26 +186,26 @@
 
 @media (max-width: 1180px) {
   .page-home .masthead-main {
-    grid-template-columns: 158px 1fr 178px;
-    height: 76px;
+    grid-template-columns: 145px 1fr 168px;
+    height: 72px;
   }
 
   .page-home .identity {
-    width: 124px;
-    height: 48px;
+    width: 116px;
+    height: 44px;
   }
 
   .page-home .site-nav {
-    gap: 14px;
+    gap: 12px;
   }
 
   .page-home .site-nav > a {
-    font-size: 0.78rem;
+    font-size: 0.72rem;
   }
 
   .page-home .nav-cta-outside {
-    width: 158px;
-    height: 40px;
-    font-size: 0.66rem;
+    width: 150px;
+    height: 38px;
+    font-size: 0.62rem;
   }
 }
