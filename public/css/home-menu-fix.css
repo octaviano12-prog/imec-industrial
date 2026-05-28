@@ -2,8 +2,14 @@
 .page-home .masthead-main {
   display: flex;
   align-items: center;
-  gap: clamp(30px, 4vw, 64px);
-  height: 86px;
+  gap: clamp(24px, 3.4vw, 52px);
+  height: 74px;
+}
+
+.page-home .identity {
+  width: 124px;
+  height: 52px;
+  flex: 0 0 124px;
 }
 
 .page-home .site-nav {
@@ -11,25 +17,28 @@
   flex: 1;
   align-items: center;
   justify-content: center;
-  gap: clamp(16px, 2vw, 28px);
+  gap: clamp(12px, 1.45vw, 22px);
 }
 
 .page-home .site-nav > a:not(.nav-cta) {
   margin: 0;
-  font-size: 0.72rem;
+  font-size: 0.64rem;
   letter-spacing: 0.05em;
 }
 
 .page-home .nav-cta {
-  min-width: 190px;
-  margin-left: clamp(14px, 2.2vw, 34px);
-  padding: 0 24px;
+  min-width: 158px;
+  min-height: 42px;
+  margin-left: clamp(10px, 1.8vw, 26px);
+  padding: 0 18px;
+  font-size: 0.66rem;
   text-align: center;
 }
 
 .industrial-hero {
-  min-height: 745px;
-  padding-top: 166px;
+  min-height: calc(100vh - 74px);
+  max-height: 720px;
+  padding-top: clamp(118px, 15vh, 138px);
 }
 
 .industrial-hero-content,
@@ -38,15 +47,16 @@
 }
 
 .industrial-hero h1 {
-  font-size: clamp(5.2rem, 7.4vw, 8rem);
+  font-size: clamp(3.9rem, 5.75vw, 6.25rem);
 }
 
 .industrial-qualities {
-  margin-top: 78px;
+  margin-top: clamp(42px, 6vh, 58px);
 }
 
 .industrial-qualities article {
-  padding: 30px 24px;
+  min-height: 92px;
+  padding: 22px 20px;
 }
 
 .industrial-qualities span,
@@ -64,7 +74,7 @@
 }
 
 .stat-panel article {
-  padding: 42px 30px 40px;
+  padding: 34px 28px 32px;
 }
 
 .industrial-reference,
@@ -107,7 +117,7 @@
   }
 
   .page-home .site-nav > a:not(.nav-cta) {
-    font-size: 0.68rem;
+    font-size: 0.62rem;
   }
 
   .page-home .nav-cta {
@@ -118,7 +128,13 @@
 
 @media (max-width: 840px) {
   .page-home .masthead-main {
-    height: 74px;
+    height: 68px;
+  }
+
+  .page-home .identity {
+    width: 118px;
+    height: 48px;
+    flex-basis: 118px;
   }
 
   .industrial-qualities,
