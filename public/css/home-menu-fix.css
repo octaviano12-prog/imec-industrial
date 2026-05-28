@@ -41,14 +41,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(20px, 1.65vw, 32px);
+  gap: clamp(18px, 1.45vw, 28px);
 }
 
 .page-home .site-nav > a {
   margin: 0;
   padding: 18px 0;
   color: #eef5fb;
-  font-size: 1rem;
+  font-size: 0.92rem;
   line-height: 1;
   letter-spacing: 0.035em;
   font-weight: 900;
@@ -70,7 +70,7 @@
   background: linear-gradient(135deg, #ff214b 0%, #e11139 52%, #b30a29 100%);
   box-shadow: 0 12px 28px rgba(255, 23, 68, 0.22);
   color: #fff;
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   font-weight: 900;
   letter-spacing: 0.01em;
   text-decoration: none;
