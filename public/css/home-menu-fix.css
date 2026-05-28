@@ -16,16 +16,16 @@
 
 .page-home .masthead-main {
   display: grid;
-  grid-template-columns: 180px 1fr 210px;
+  grid-template-columns: 190px 1fr 220px;
   align-items: center;
-  gap: 22px;
-  height: 78px;
+  gap: 24px;
+  height: 82px;
 }
 
 .page-home .identity {
   display: flex;
-  width: 132px;
-  height: 52px;
+  width: 140px;
+  height: 54px;
   align-items: center;
   padding: 0;
   background: transparent;
@@ -41,15 +41,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(16px, 1.45vw, 28px);
+  gap: clamp(18px, 1.55vw, 30px);
 }
 
 .page-home .site-nav > a {
   margin: 0;
-  padding: 14px 0;
-  font-size: 0.78rem;
+  padding: 16px 0;
+  font-size: 0.92rem;
   line-height: 1;
-  letter-spacing: 0.055em;
+  letter-spacing: 0.045em;
   font-weight: 900;
 }
 
@@ -59,8 +59,8 @@
 
 .page-home .nav-cta-outside {
   display: inline-flex;
-  width: 178px;
-  height: 44px;
+  width: 188px;
+  height: 46px;
   align-items: center;
   justify-content: center;
   justify-self: end;
@@ -68,7 +68,7 @@
   background: linear-gradient(135deg, #ff214b 0%, #e11139 52%, #b30a29 100%);
   box-shadow: 0 12px 28px rgba(255, 23, 68, 0.22);
   color: #fff;
-  font-size: 0.68rem;
+  font-size: 0.76rem;
   font-weight: 900;
   letter-spacing: 0.01em;
   text-decoration: none;
@@ -79,7 +79,7 @@
 .page-home .industrial-hero {
   width: 100vw;
   max-width: none;
-  min-height: calc(100vh - 78px);
+  min-height: calc(100vh - 82px);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
   padding-top: clamp(92px, 10vh, 124px);
@@ -173,26 +173,26 @@
 
 @media (max-width: 1180px) {
   .page-home .masthead-main {
-    grid-template-columns: 138px 1fr 156px;
-    height: 70px;
+    grid-template-columns: 150px 1fr 170px;
+    height: 74px;
   }
 
   .page-home .identity {
-    width: 108px;
-    height: 42px;
+    width: 118px;
+    height: 46px;
   }
 
   .page-home .site-nav {
-    gap: 11px;
+    gap: 13px;
   }
 
   .page-home .site-nav > a {
-    font-size: 0.64rem;
+    font-size: 0.72rem;
   }
 
   .page-home .nav-cta-outside {
-    width: 142px;
-    height: 38px;
-    font-size: 0.58rem;
+    width: 152px;
+    height: 40px;
+    font-size: 0.64rem;
   }
 }
