@@ -1,0 +1,10 @@
+Forçar novo deploy/cache Hostinger
+
+Arquivo criado para obrigar o provedor a detectar nova alteração no repositório.
+Últimos ajustes aplicados:
+- hero corrigido para não cortar o título;
+- menu reduzido e equilibrado;
+- conteúdo do hero reposicionado;
+- cache CSS atualizado no head.ejs.
+
+Após este commit, acionar redeploy na Hostinger ou aguardar sincronização automática.
