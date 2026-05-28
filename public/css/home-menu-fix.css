@@ -74,14 +74,40 @@
   white-space: nowrap;
 }
 
-/* HERO WIDESCREEN */
+/* HERO TELA INTEIRA: imagem e conteúdo ocupando 100% da largura */
 .page-home .industrial-hero {
+  width: 100vw;
+  max-width: none;
   min-height: calc(100vh - 64px);
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
   padding-top: clamp(100px, 12vh, 140px);
 }
 
+.page-home .industrial-hero-media {
+  left: 0;
+  right: 0;
+  width: 100vw;
+}
+
+.page-home .industrial-hero-media img,
+.page-home .industrial-hero-media video {
+  width: 100vw;
+  max-width: none;
+  object-fit: cover;
+  object-position: center center;
+}
+
+.page-home .industrial-hero-content,
+.page-home .industrial-qualities {
+  width: min(calc(100% - (var(--pad) * 2)), var(--shell));
+  max-width: var(--shell);
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .page-home .industrial-hero-content {
-  max-width: 920px;
+  max-width: 1440px;
 }
 
 .page-home .industrial-hero h1 {
