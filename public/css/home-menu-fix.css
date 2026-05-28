@@ -1,11 +1,26 @@
-/* Ajuste exclusivo do topo da home */
+/* Layout fluido premium IMEC - desktop, ultrawide, tablet e mobile */
 .page-home {
-  --shell: 1440px;
-  --pad: clamp(20px, 3.2vw, 58px);
+  --shell: 1780px;
+  --pad: clamp(18px, 3vw, 70px);
+  overflow-x: hidden;
 }
 
 .page-home .shell {
-  width: min(calc(100% - (var(--pad) * 2)), var(--shell));
+  width: min(calc(100% - (var(--pad) * 2)), var(--shell)) !important;
+  max-width: var(--shell) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.page-home .premium-home,
+.page-home main,
+.page-home .industrial-hero,
+.page-home .industrial-stats,
+.page-home .industrial-reference,
+.page-home .industrial-projects,
+.page-home .industrial-final-cta {
+  width: 100%;
+  max-width: none;
 }
 
 .page-home .masthead {
@@ -16,15 +31,15 @@
 
 .page-home .masthead-main {
   display: grid;
-  grid-template-columns: 185px 1fr 215px;
+  grid-template-columns: clamp(135px, 13vw, 205px) minmax(0, 1fr) clamp(150px, 15vw, 220px);
   align-items: center;
-  gap: 22px;
+  gap: clamp(12px, 1.6vw, 26px);
   height: 76px;
 }
 
 .page-home .identity {
   display: flex;
-  width: 138px;
+  width: clamp(112px, 9vw, 148px);
   height: 52px;
   align-items: center;
   padding: 0;
@@ -41,14 +56,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: clamp(16px, 1.35vw, 26px);
+  gap: clamp(13px, 1.25vw, 26px);
 }
 
 .page-home .site-nav > a {
   margin: 0;
   padding: 16px 0;
   color: #eef5fb;
-  font-size: 0.86rem;
+  font-size: clamp(0.74rem, 0.72vw, 0.9rem);
   line-height: 1;
   letter-spacing: 0.035em;
   font-weight: 900;
@@ -61,7 +76,7 @@
 
 .page-home .nav-cta-outside {
   display: inline-flex;
-  width: 186px;
+  width: clamp(150px, 12vw, 186px);
   height: 44px;
   align-items: center;
   justify-content: center;
@@ -70,61 +85,192 @@
   background: linear-gradient(135deg, #ff214b 0%, #e11139 52%, #b30a29 100%);
   box-shadow: 0 12px 28px rgba(255, 23, 68, 0.22);
   color: #fff;
-  font-size: 0.74rem;
+  font-size: clamp(0.62rem, 0.65vw, 0.74rem);
   font-weight: 900;
   letter-spacing: 0.01em;
   text-decoration: none;
   white-space: nowrap;
 }
 
+/* HERO FULL WIDTH REAL: seção encosta nas laterais; conteúdo respira automaticamente */
 .page-home .industrial-hero {
+  position: relative;
   display: flex;
-  width: 100vw;
-  max-width: none;
-  min-height: calc(100vh - 76px);
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 100vw !important;
+  max-width: none !important;
+  min-height: calc(100svh - 76px);
+  margin-left: calc(50% - 50vw) !important;
+  margin-right: calc(50% - 50vw) !important;
   flex-direction: column;
   justify-content: center;
+  overflow: hidden;
   padding-top: 76px;
-  padding-bottom: 0;
+  padding-bottom: clamp(42px, 5vh, 70px);
 }
 
 .page-home .industrial-hero-media {
-  left: 0;
-  right: 0;
-  width: 100vw;
+  position: absolute;
+  inset: 0;
+  left: 0 !important;
+  right: 0 !important;
+  width: 100vw !important;
+  max-width: none !important;
 }
 
 .page-home .industrial-hero-media img,
 .page-home .industrial-hero-media video {
-  width: 100vw;
-  max-width: none;
+  display: block;
+  width: 100vw !important;
+  height: 100% !important;
+  max-width: none !important;
   object-fit: cover;
-  object-position: 64% center;
+  object-position: 66% center;
   filter: saturate(1.22) contrast(1.14) brightness(1.06);
 }
 
 .page-home .industrial-hero-content,
 .page-home .industrial-qualities {
-  width: min(calc(100% - (var(--pad) * 2)), var(--shell));
-  max-width: var(--shell);
-  margin-left: auto;
-  margin-right: auto;
+  position: relative;
+  z-index: 2;
+  width: min(calc(100% - (var(--pad) * 2)), var(--shell)) !important;
+  max-width: var(--shell) !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+
+.page-home .industrial-hero-content {
+  transform: none;
 }
 
 .page-home .industrial-hero h1 {
-  max-width: 850px;
-  font-size: clamp(3.55rem, 4.75vw, 6.15rem);
+  max-width: min(960px, 62vw);
+  font-size: clamp(3.6rem, 4.9vw, 6.9rem);
   line-height: 0.96;
 }
 
 .page-home .industrial-lead {
-  max-width: 680px;
-  font-size: clamp(1.08rem, 1.2vw, 1.26rem);
+  max-width: min(700px, 48vw);
+  font-size: clamp(1.02rem, 1.1vw, 1.26rem);
   line-height: 1.62;
 }
 
+.page-home .industrial-actions {
+  gap: clamp(14px, 1.4vw, 24px);
+}
+
+.page-home .industrial-qualities {
+  margin-top: clamp(54px, 6vh, 84px);
+  transform: none;
+}
+
+.page-home .industrial-qualities article {
+  min-height: 118px;
+  padding: clamp(22px, 1.8vw, 30px);
+}
+
+.page-home .industrial-stats {
+  padding-top: clamp(38px, 4vw, 64px);
+}
+
+.page-home .industrial-qualities h2,
+.page-home .reference-services h3,
+.page-home .project-card h3 {
+  font-size: clamp(0.76rem, 0.8vw, 0.9rem);
+  line-height: 1.2;
+}
+
+.page-home .industrial-qualities p,
+.page-home .reference-services p,
+.page-home .project-card p,
+.page-home .stat-panel p,
+.page-home .project-heading > p,
+.page-home .reference-copy p:not(.eyebrow),
+.page-home .industrial-final-cta p {
+  font-size: clamp(0.88rem, 0.88vw, 1rem);
+  line-height: 1.62;
+}
+
+.page-home .reference-copy h2,
+.page-home .project-heading h2 {
+  font-size: clamp(3.2rem, 4.45vw, 5.1rem);
+}
+
+.page-home .industrial-final-cta h2 {
+  font-size: clamp(3rem, 4.4vw, 5rem);
+}
+
+.page-home .stat-panel strong {
+  font-size: clamp(3.35rem, 4.25vw, 4.7rem);
+}
+
+.page-home .stat-panel b {
+  font-size: 0.9rem;
+}
+
+.page-home .reference-services article {
+  min-height: 188px;
+  padding: clamp(24px, 2vw, 32px);
+}
+
+.page-home .project-card,
+.page-home .project-card img {
+  min-height: clamp(290px, 22vw, 350px);
+}
+
+.page-home .footer,
+.page-home .footer p,
+.page-home .footer a,
+.page-home .footer li {
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+@media (min-width: 1800px) {
+  .page-home {
+    --shell: 1840px;
+    --pad: clamp(48px, 4vw, 90px);
+  }
+
+  .page-home .industrial-hero h1 {
+    max-width: 1080px;
+  }
+}
+
+@media (max-width: 1180px) {
+  .page-home .masthead-main {
+    grid-template-columns: 145px 1fr 168px;
+    height: 72px;
+  }
+
+  .page-home .identity {
+    width: 116px;
+    height: 44px;
+  }
+
+  .page-home .site-nav {
+    gap: 12px;
+  }
+
+  .page-home .site-nav > a {
+    font-size: 0.72rem;
+  }
+
+  .page-home .nav-cta-outside {
+    width: 150px;
+    height: 38px;
+    font-size: 0.62rem;
+  }
+
+  .page-home .industrial-hero h1 {
+    max-width: 850px;
+  }
+
+  .page-home .industrial-lead {
+    max-width: 680px;
+  }
+}
+
+/* Correção mobile: menu, hero e cards sem sobreposição */
 @media (max-width: 840px) {
   .page-home {
     --pad: 22px;
@@ -195,6 +341,11 @@
     justify-content: flex-start;
   }
 
+  .page-home .industrial-hero-media img,
+  .page-home .industrial-hero-media video {
+    object-position: 58% center;
+  }
+
   .page-home .industrial-hero h1 {
     max-width: 100%;
     font-size: clamp(3rem, 13vw, 4.2rem);
@@ -202,6 +353,7 @@
   }
 
   .page-home .industrial-lead {
+    max-width: 100%;
     font-size: 1rem;
     line-height: 1.55;
   }
