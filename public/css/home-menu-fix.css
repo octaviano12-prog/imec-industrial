@@ -74,14 +74,14 @@
   white-space: nowrap;
 }
 
-/* HERO TELA INTEIRA: imagem e conteúdo ocupando 100% da largura */
+/* HERO TELA INTEIRA */
 .page-home .industrial-hero {
   width: 100vw;
   max-width: none;
   min-height: calc(100vh - 64px);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-top: clamp(100px, 12vh, 140px);
+  padding-top: clamp(92px, 10vh, 124px);
 }
 
 .page-home .industrial-hero-media {
@@ -111,17 +111,63 @@
 }
 
 .page-home .industrial-hero h1 {
-  max-width: 920px;
-  font-size: clamp(4.4rem, 6vw, 7.8rem);
+  max-width: 860px;
+  font-size: clamp(3.9rem, 5.15vw, 6.65rem);
+  line-height: 0.95;
 }
 
 .page-home .industrial-lead {
-  max-width: 720px;
-  font-size: clamp(1rem, 1.2vw, 1.24rem);
+  max-width: 640px;
+  font-size: clamp(0.98rem, 1.05vw, 1.14rem);
+  line-height: 1.62;
 }
 
 .page-home .industrial-qualities {
-  margin-top: clamp(56px, 7vh, 90px);
+  margin-top: clamp(42px, 5.5vh, 70px);
+}
+
+.page-home .industrial-qualities article {
+  min-height: 106px;
+  padding: 24px 26px;
+}
+
+.page-home .industrial-qualities h2,
+.page-home .reference-services h3,
+.page-home .project-card h3 {
+  font-size: 0.72rem;
+}
+
+.page-home .industrial-qualities p,
+.page-home .reference-services p,
+.page-home .project-card p,
+.page-home .stat-panel p,
+.page-home .project-heading > p,
+.page-home .reference-copy p:not(.eyebrow),
+.page-home .industrial-final-cta p {
+  font-size: 0.86rem;
+}
+
+.page-home .reference-copy h2,
+.page-home .project-heading h2 {
+  font-size: clamp(3.2rem, 4.45vw, 5.1rem);
+}
+
+.page-home .industrial-final-cta h2 {
+  font-size: clamp(3rem, 4.4vw, 5rem);
+}
+
+.page-home .stat-panel strong {
+  font-size: clamp(3.35rem, 4.25vw, 4.7rem);
+}
+
+.page-home .reference-services article {
+  min-height: 168px;
+  padding: 26px;
+}
+
+.page-home .project-card,
+.page-home .project-card img {
+  min-height: 310px;
 }
 
 @media (max-width: 1180px) {
