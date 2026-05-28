@@ -16,15 +16,15 @@
 
 .page-home .masthead-main {
   display: grid;
-  grid-template-columns: 140px 1fr 160px;
+  grid-template-columns: 120px 1fr 160px;
   align-items: center;
   gap: 16px;
   height: 64px;
 }
 
 .page-home .identity {
-  width: 102px;
-  height: 38px;
+  width: 82px;
+  height: 32px;
   display: flex;
   align-items: center;
 }
@@ -94,13 +94,13 @@
 
 @media (max-width: 1180px) {
   .page-home .masthead-main {
-    grid-template-columns: 118px 1fr 132px;
+    grid-template-columns: 98px 1fr 132px;
     height: 62px;
   }
 
   .page-home .identity {
-    width: 94px;
-    height: 36px;
+    width: 76px;
+    height: 30px;
   }
 
   .page-home .site-nav {
