@@ -1,84 +1,108 @@
 <%- include("partials/head") %>
 <%- include("partials/header") %>
 
-    <main id="main">
-      <section class="ref-hero">
-        <div class="hero-background">
+    <main id="main" class="premium-home">
+      <section class="industrial-hero">
+        <div class="industrial-hero-media">
           <% if (site.home.heroVideo) { %>
             <video autoplay muted loop playsinline src="<%= site.home.heroVideo %>"></video>
           <% } else { %>
             <img src="<%= site.home.heroMedia %>" alt="">
           <% } %>
         </div>
-        <div class="shell ref-hero-inner">
-          <div class="ref-hero-content">
-            <p class="eyebrow reveal"><%= site.home.eyebrow %></p>
-            <h1 class="reveal"><%= site.home.title %> <em><%= site.home.titleAccent %></em></h1>
-            <p class="ref-hero-lead reveal"><%= site.home.subtitle %></p>
-            <div class="ref-buttons reveal">
-              <a class="pill pill-red" href="/contato">Solicitar orçamento</a>
-              <a class="pill pill-line" href="/reformas-servicos">Ver reformas e serviços</a>
-            </div>
+        <div class="industrial-orbit" aria-hidden="true"></div>
+        <div class="shell industrial-hero-content">
+          <p class="eyebrow reveal"><%= site.home.eyebrow %></p>
+          <h1 class="reveal">Engenharia industrial<br>de <em>alta performance</em></h1>
+          <p class="industrial-lead reveal"><%= site.home.subtitle %></p>
+          <div class="industrial-actions reveal">
+            <a class="pill pill-red" href="/contato">Solicitar orçamento</a>
+            <a class="pill pill-line" href="/reformas-servicos">Conhecer serviços</a>
           </div>
         </div>
-        <div class="shell ref-capabilities">
+        <div class="shell industrial-qualities">
           <% [
-            ["Experiência em campo", "Equipe preparada para montagem, reforma e manutenção."],
-            ["Estrutura fabril", "Capacidade para equipamentos industriais de grande porte."],
-            ["Engenharia aplicada", "Soluções dimensionadas para o processo da usina."],
-            ["Segurança e qualidade", "Foco em segurança industrial, prazo e desempenho."]
-          ].forEach((item, index) => { %>
-            <article class="reveal">
-              <span class="ref-icon">0<%= index + 1 %></span>
-              <div><h2><%= item[0] %></h2><p><%= item[1] %></p></div>
-            </article>
+            ["Segurança e qualidade", "Processos certificados e foco em segurança industrial"],
+            ["Engenharia aplicada", "Soluções personalizadas para máxima eficiência"],
+            ["Experiência comprovada", "Atuação sólida em usinas e indústrias de todo o Brasil"],
+            ["Entrega com excelência", "Compromisso com prazos, desempenho e resultados"]
+          ].forEach((item) => { %>
+            <article class="reveal"><span></span><div><h2><%= item[0] %></h2><p><%= item[1] %></p></div></article>
           <% }) %>
         </div>
       </section>
 
-      <section class="ref-intro" id="caminhos">
-        <div class="shell ref-intro-grid">
-          <div class="reveal">
-            <p class="eyebrow dark">Experiência industrial</p>
-            <h2>Projetada para<br> usinas.<br> Entregue em<br> <em>campo.</em></h2>
-          </div>
-          <div class="ref-intro-copy reveal">
-            <p><%= site.home.introText %></p>
-            <a class="outline-action" href="/reformas-servicos">Conheça nossos serviços <span>+</span></a>
-          </div>
-          <img class="ref-intro-image reveal" src="<%= site.home.featureReformMedia %>" alt="Profissional IMEC atuando em equipamento industrial">
-        </div>
-      </section>
-
-      <section class="ref-portals">
-        <div class="shell ref-portal-grid">
-          <a class="ref-portal reveal" href="/equipamentos">
-            <img src="<%= site.home.featureManufacturingMedia %>" alt="">
-            <div><span>Equipamentos</span><h3>Fabricação industrial</h3><p>Soluções robustas para processos exigentes.</p><b>Saiba mais &nbsp; +</b></div>
-          </a>
-          <a class="ref-portal reveal" href="/reformas-servicos">
-            <img src="<%= site.home.featureReformMedia %>" alt="">
-            <div><span>Serviços</span><h3>Reformas e retrofit</h3><p>Reformas com precisão para máxima confiabilidade.</p><b>Saiba mais &nbsp; +</b></div>
-          </a>
-          <a class="ref-portal reveal" href="/projetos">
-            <img src="<%= site.home.processMedia %>" alt="">
-            <div><span>Mídia</span><h3>Galeria de projetos</h3><p>Conheça projetos executados pela IMEC.</p><b>Saiba mais &nbsp; +</b></div>
-          </a>
-        </div>
-      </section>
-
-      <section class="ref-proof">
-        <div class="shell ref-proof-grid reveal">
-          <% site.home.numbers.forEach((number, index) => { %>
+      <section class="industrial-stats">
+        <div class="shell stat-panel reveal">
+          <% [
+            ["+100", "Usinas atendidas", "Atuação em todo o Brasil"],
+            ["+25", "Anos de história", "Tradição, confiança e solidez"],
+            ["+500", "Projetos executados", "Em diferentes segmentos industriais"],
+            ["5.000m²", "Área fabril", "Estrutura completa para grandes fabricações"]
+          ].forEach((item) => { %>
             <article>
-              <span class="ref-proof-icon">0<%= index + 1 %></span>
-              <div><strong class="count"><%= number.value %></strong><b><%= number.label %></b><p><%= index === 0 ? "Atuação em usinas e indústrias" : index === 1 ? "Mais de 25 anos de história" : index === 2 ? "Capacidade fabril ampliada" : "Credibilidade para projetos" %></p></div>
+              <i></i>
+              <strong><%= item[0] %></strong>
+              <b><%= item[1] %></b>
+              <p><%= item[2] %></p>
             </article>
           <% }) %>
         </div>
       </section>
 
-      <%- include("partials/cta") %>
+      <section class="industrial-reference">
+        <div class="shell reference-grid">
+          <div class="reference-copy reveal">
+            <p class="eyebrow">Por que a IMEC</p>
+            <h2>É referência<br>em engenharia?</h2>
+            <p>Combinamos engenharia, tecnologia e mão de obra especializada para entregar soluções industriais completas, seguras e eficientes.</p>
+            <a class="outline-action" href="/empresa">Conheça mais sobre a IMEC <span>+</span></a>
+          </div>
+          <div class="reference-services reveal">
+            <% [
+              ["Fabricação industrial", "Equipamentos e estruturas metálicas de alta complexidade."],
+              ["Reformas e retrofit", "Modernização e aumento de vida útil de equipamentos e plantas."],
+              ["Montagem industrial", "Montagem eletromecânica com segurança e precisão."],
+              ["Caldeiraria pesada", "Serviços especializados em chapas grossas e estruturas robustas."],
+              ["Engenharia e projetos", "Desenvolvimento técnico e soluções personalizadas."],
+              ["Manutenção industrial", "Paradas programadas, manutenção preventiva e corretiva."]
+            ].forEach((service) => { %>
+              <article><span></span><h3><%= service[0] %></h3><p><%= service[1] %></p></article>
+            <% }) %>
+          </div>
+        </div>
+      </section>
+
+      <section class="industrial-projects">
+        <div class="shell project-heading reveal">
+          <div>
+            <p class="eyebrow">Projetos que</p>
+            <h2>Geram <em>resultados</em></h2>
+          </div>
+          <p>Atuamos em projetos desafiadores que exigem precisão, tecnologia e compromisso. Cada entrega é feita para impulsionar a produtividade e a eficiência da sua operação.</p>
+        </div>
+        <div class="shell project-showcase">
+          <% [
+            [site.home.processMedia, "Reforma de caldeiras", "Usina Delta - SP"],
+            [site.home.featureReformMedia, "Trocadores de calor", "Usina Ipê - PR"],
+            [site.home.heroMedia, "Montagem industrial", "Usina Santa Clara - GO"],
+            [site.home.featureManufacturingMedia, "Fabricação especial", "Usina Vale do Sol - MG"]
+          ].forEach((card) => { %>
+            <article class="project-card reveal">
+              <img src="<%= card[0] %>" alt="<%= card[1] %>">
+              <div><h3><%= card[1] %></h3><p><%= card[2] %></p></div>
+            </article>
+          <% }) %>
+        </div>
+      </section>
+
+      <section class="industrial-final-cta">
+        <div class="shell final-cta-grid">
+          <h2>Pronto para sua próxima<br>parada industrial?</h2>
+          <p>Entre em contato com nosso time de engenharia e descubra como a IMEC pode transformar sua operação com eficiência e segurança.</p>
+          <a class="pill pill-red" href="/contato">Falar com a engenharia</a>
+        </div>
+      </section>
     </main>
 
 <%- include("partials/footer") %>
