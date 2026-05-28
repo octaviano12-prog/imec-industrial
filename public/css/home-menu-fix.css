@@ -77,7 +77,6 @@
   white-space: nowrap;
 }
 
-/* HERO domina a primeira dobra sem cortar o titulo */
 .page-home .industrial-hero {
   display: flex;
   width: 100vw;
@@ -114,11 +113,6 @@
   margin-right: auto;
 }
 
-.page-home .industrial-hero-content {
-  max-width: 1440px;
-  transform: translateY(0);
-}
-
 .page-home .industrial-hero h1 {
   max-width: 850px;
   font-size: clamp(3.55rem, 4.75vw, 6.15rem);
@@ -131,95 +125,106 @@
   line-height: 1.62;
 }
 
-.page-home .industrial-qualities {
-  margin-top: 0;
-  transform: translateY(86px);
-}
+@media (max-width: 840px) {
+  .page-home {
+    --pad: 22px;
+  }
 
-.page-home .industrial-qualities article {
-  min-height: 118px;
-  padding: 28px 30px;
-}
-
-.page-home .industrial-stats {
-  padding-top: 118px;
-}
-
-.page-home .industrial-qualities h2,
-.page-home .reference-services h3,
-.page-home .project-card h3 {
-  font-size: 0.86rem;
-  line-height: 1.2;
-}
-
-.page-home .industrial-qualities p,
-.page-home .reference-services p,
-.page-home .project-card p,
-.page-home .stat-panel p,
-.page-home .project-heading > p,
-.page-home .reference-copy p:not(.eyebrow),
-.page-home .industrial-final-cta p {
-  font-size: 1rem;
-  line-height: 1.62;
-}
-
-.page-home .reference-copy h2,
-.page-home .project-heading h2 {
-  font-size: clamp(3.2rem, 4.45vw, 5.1rem);
-}
-
-.page-home .industrial-final-cta h2 {
-  font-size: clamp(3rem, 4.4vw, 5rem);
-}
-
-.page-home .stat-panel strong {
-  font-size: clamp(3.35rem, 4.25vw, 4.7rem);
-}
-
-.page-home .stat-panel b {
-  font-size: 0.9rem;
-}
-
-.page-home .reference-services article {
-  min-height: 188px;
-  padding: 30px;
-}
-
-.page-home .project-card,
-.page-home .project-card img {
-  min-height: 330px;
-}
-
-.page-home .footer,
-.page-home .footer p,
-.page-home .footer a,
-.page-home .footer li {
-  font-size: 1rem;
-  line-height: 1.65;
-}
-
-@media (max-width: 1180px) {
   .page-home .masthead-main {
-    grid-template-columns: 145px 1fr 168px;
-    height: 72px;
+    grid-template-columns: 108px 42px 1fr;
+    gap: 10px;
+    height: 74px;
   }
 
   .page-home .identity {
-    width: 116px;
+    width: 104px;
     height: 44px;
+    overflow: hidden;
+  }
+
+  .page-home .nav-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.16);
+    background: rgba(255,255,255,0.03);
+  }
+
+  .page-home .nav-trigger b {
+    display: none;
   }
 
   .page-home .site-nav {
-    gap: 12px;
+    display: none;
   }
 
-  .page-home .site-nav > a {
-    font-size: 0.72rem;
+  body.menu-shown .page-home .site-nav {
+    position: fixed;
+    top: 74px;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    display: grid;
+    grid-template-columns: 1fr;
+    background: rgba(2, 12, 23, 0.98);
+    padding: 10px 22px 18px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(18px);
+  }
+
+  body.menu-shown .page-home .site-nav > a {
+    padding: 16px 4px;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+    font-size: 1rem;
+    text-align: left;
   }
 
   .page-home .nav-cta-outside {
-    width: 150px;
-    height: 38px;
-    font-size: 0.62rem;
+    width: 164px;
+    height: 42px;
+    font-size: 0.7rem;
+  }
+
+  .page-home .industrial-hero {
+    min-height: auto;
+    padding-top: 104px;
+    padding-bottom: 34px;
+    justify-content: flex-start;
+  }
+
+  .page-home .industrial-hero h1 {
+    max-width: 100%;
+    font-size: clamp(3rem, 13vw, 4.2rem);
+    line-height: 0.96;
+  }
+
+  .page-home .industrial-lead {
+    font-size: 1rem;
+    line-height: 1.55;
+  }
+
+  .page-home .industrial-actions {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .page-home .industrial-actions .pill {
+    width: 100%;
+  }
+
+  .page-home .industrial-qualities {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 26px;
+    transform: none;
+  }
+
+  .page-home .industrial-qualities article {
+    padding: 24px;
+    border-right: 0;
   }
 }
