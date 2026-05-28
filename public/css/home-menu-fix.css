@@ -1,20 +1,30 @@
 /* Fine tuning for the premium home reference layout */
 .page-home {
-  --shell: 1180px;
-  --pad: clamp(18px, 3vw, 44px);
+  --shell: 1440px;
+  --pad: clamp(20px, 3.2vw, 58px);
+}
+
+.page-home .shell {
+  width: min(calc(100% - (var(--pad) * 2)), var(--shell));
+}
+
+.page-home .masthead {
+  background: rgba(2, 12, 23, 0.9);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
 }
 
 .page-home .masthead-main {
   display: flex;
   align-items: center;
-  gap: clamp(18px, 2.4vw, 38px);
-  height: 70px;
+  gap: clamp(22px, 2.8vw, 50px);
+  height: 72px;
 }
 
 .page-home .identity {
-  width: 118px;
-  height: 48px;
-  flex: 0 0 118px;
+  width: 132px;
+  height: 52px;
+  flex: 0 0 132px;
 }
 
 .page-home .site-nav {
@@ -22,24 +32,48 @@
   flex: 1;
   align-items: center;
   justify-content: center;
-  gap: clamp(10px, 1.1vw, 18px);
+  gap: clamp(13px, 1.35vw, 24px);
 }
 
 .page-home .site-nav > a:not(.nav-cta) {
   margin: 0;
   padding: 16px 0;
-  font-size: 0.61rem;
-  letter-spacing: 0.055em;
+  font-size: 0.64rem;
+  letter-spacing: 0.06em;
 }
 
 .page-home .nav-cta {
-  min-width: 150px;
-  min-height: 40px;
-  margin-left: clamp(8px, 1.4vw, 20px);
-  padding: 0 16px;
-  font-size: 0.64rem;
+  position: relative;
+  display: inline-flex;
+  min-width: 176px;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  margin-left: clamp(10px, 1.6vw, 28px);
+  padding: 0 22px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff254d 0%, #e11239 48%, #9f0924 100%);
+  box-shadow: 0 14px 32px rgba(255, 23, 68, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  color: #fff;
+  font-size: 0.66rem;
+  font-weight: 900;
+  letter-spacing: 0.045em;
   text-align: center;
-  border-radius: 5px;
+}
+
+.page-home .nav-cta::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.28), transparent);
+  transform: translateX(-130%);
+  transition: transform 520ms ease;
+}
+
+.page-home .nav-cta:hover::before {
+  transform: translateX(130%);
 }
 
 .premium-home .eyebrow {
@@ -55,26 +89,26 @@
 }
 
 .industrial-hero {
-  min-height: 640px;
-  max-height: 690px;
-  padding-top: 122px;
+  min-height: 650px;
+  max-height: 700px;
+  padding-top: 128px;
 }
 
 .industrial-hero-content,
 .industrial-hero h1 {
-  max-width: 760px;
+  max-width: 790px;
 }
 
 .industrial-hero h1 {
-  font-size: clamp(3.55rem, 5.15vw, 5.55rem);
+  font-size: clamp(3.7rem, 5.35vw, 6.05rem);
   line-height: 0.94;
 }
 
 .industrial-lead {
-  max-width: 560px;
+  max-width: 600px;
   margin: 22px 0 28px;
-  font-size: clamp(0.92rem, 1.08vw, 1.08rem);
-  line-height: 1.65;
+  font-size: clamp(0.94rem, 1.02vw, 1.08rem);
+  line-height: 1.62;
 }
 
 .industrial-actions {
@@ -89,20 +123,21 @@
 }
 
 .industrial-orbit {
-  right: 17%;
-  top: 156px;
-  width: 260px;
-  height: 260px;
-  opacity: 0.44;
+  right: 20%;
+  top: 150px;
+  width: 280px;
+  height: 280px;
+  opacity: 0.42;
 }
 
 .industrial-qualities {
   margin-top: 52px;
+  border-radius: 10px 10px 0 0;
 }
 
 .industrial-qualities article {
-  min-height: 96px;
-  padding: 22px 22px;
+  min-height: 94px;
+  padding: 22px 24px;
   gap: 14px;
 }
 
@@ -130,54 +165,57 @@
 }
 
 .industrial-stats {
-  padding: 30px 0 42px;
+  padding: 28px 0 40px;
 }
 
 .stat-panel {
   overflow: hidden;
-  border-radius: 8px;
+  border-radius: 10px;
 }
 
 .stat-panel article {
-  min-height: 180px;
-  padding: 30px 24px 28px;
+  min-height: 154px;
+  padding: 24px 24px 24px;
 }
 
 .stat-panel strong {
-  font-size: clamp(3rem, 4.6vw, 4.55rem);
+  font-size: clamp(2.75rem, 3.6vw, 4rem);
   line-height: 0.9;
 }
 
 .stat-panel b {
-  margin-top: 14px;
-  font-size: 0.72rem;
+  margin-top: 12px;
+  font-size: 0.7rem;
   letter-spacing: 0.14em;
 }
 
 .stat-panel p {
-  margin-top: 8px;
-  font-size: 0.76rem;
+  margin-top: 7px;
+  font-size: 0.74rem;
 }
 
-.industrial-reference,
+.industrial-reference {
+  padding: clamp(58px, 5.8vw, 82px) 0;
+}
+
 .industrial-projects {
-  padding: clamp(68px, 7vw, 92px) 0;
+  padding: clamp(62px, 6.2vw, 86px) 0;
 }
 
 .reference-grid {
-  grid-template-columns: 0.48fr 1.52fr;
-  gap: clamp(30px, 4.5vw, 58px);
+  grid-template-columns: 0.42fr 1.58fr;
+  gap: clamp(34px, 4.8vw, 70px);
   align-items: center;
 }
 
 .reference-copy h2,
 .project-heading h2,
 .industrial-final-cta h2 {
-  font-size: clamp(3rem, 4.7vw, 5rem);
+  font-size: clamp(3rem, 4.4vw, 5rem);
 }
 
 .reference-copy p {
-  max-width: 330px;
+  max-width: 360px;
   margin-top: 20px;
   font-size: 0.9rem;
 }
@@ -189,18 +227,27 @@
   font-size: 0.68rem;
 }
 
+.reference-services {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-radius: 12px;
+}
+
 .reference-services article {
-  min-height: 158px;
-  padding: 26px 26px;
+  min-height: 142px;
+  padding: 24px 24px;
 }
 
 .project-heading {
-  gap: 28px;
-  margin-bottom: 38px;
+  display: grid;
+  grid-template-columns: 0.72fr 1fr;
+  gap: 34px;
+  align-items: end;
+  margin-bottom: 36px;
 }
 
 .project-heading > p {
-  max-width: 620px;
+  max-width: 680px;
   font-size: 0.9rem;
 }
 
@@ -211,20 +258,24 @@
 
 .project-card,
 .project-card img {
-  min-height: 300px;
+  min-height: 255px;
+}
+
+.project-card {
+  border-radius: 10px;
 }
 
 .project-card div {
-  padding: 22px 22px;
+  padding: 20px 20px;
 }
 
 .industrial-final-cta {
-  padding: clamp(50px, 5.8vw, 68px) 0;
+  padding: clamp(48px, 5.2vw, 62px) 0;
 }
 
 .final-cta-grid {
   display: grid;
-  grid-template-columns: 1.15fr 1fr;
+  grid-template-columns: 0.9fr 1fr auto;
   gap: 34px;
   align-items: center;
 }
@@ -234,8 +285,9 @@
 }
 
 .final-cta-grid .pill {
-  width: 100%;
-  justify-self: stretch;
+  min-width: 260px;
+  width: auto;
+  justify-self: end;
 }
 
 @media (max-width: 1180px) {
@@ -255,11 +307,20 @@
 
   .page-home .nav-cta {
     min-width: 0;
-    padding: 0 14px;
+    padding: 0 16px;
+  }
+
+  .reference-services {
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .project-showcase {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card,
+  .project-card img {
+    min-height: 290px;
   }
 }
 
@@ -288,6 +349,8 @@
   .industrial-qualities,
   .stat-panel,
   .reference-grid,
+  .reference-services,
+  .project-heading,
   .project-showcase,
   .final-cta-grid {
     grid-template-columns: 1fr;
@@ -311,5 +374,11 @@
   .project-card,
   .project-card img {
     min-height: 260px;
+  }
+
+  .final-cta-grid .pill {
+    width: 100%;
+    min-width: 0;
+    justify-self: stretch;
   }
 }
