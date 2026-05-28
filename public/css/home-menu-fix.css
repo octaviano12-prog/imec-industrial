@@ -17,15 +17,15 @@
 .page-home .masthead-main {
   position: relative;
   display: grid;
-  grid-template-columns: 190px 1fr 210px;
+  grid-template-columns: 170px minmax(0, 1fr) 170px;
   align-items: center;
   gap: 18px;
   height: 66px;
 }
 
 .page-home .identity {
-  width: 128px;
-  height: 50px;
+  width: 116px;
+  height: 42px;
   justify-self: start;
   align-self: center;
   transform: translateY(0);
@@ -39,6 +39,7 @@
 
 .page-home .site-nav {
   display: flex;
+  min-width: 0;
   align-items: center;
   justify-content: center;
   gap: clamp(12px, 1.15vw, 22px);
@@ -55,21 +56,21 @@
 .page-home .nav-cta {
   position: relative;
   display: inline-flex;
-  min-width: 172px;
-  min-height: 42px;
+  min-width: 148px;
+  min-height: 38px;
   align-items: center;
   justify-content: center;
   justify-self: end;
-  padding: 0 20px;
+  padding: 0 16px;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.16);
   border-radius: 9px;
   background: linear-gradient(135deg, #ff214b 0%, #e11139 52%, #b30a29 100%);
-  box-shadow: 0 12px 28px rgba(255, 23, 68, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.22);
+  box-shadow: 0 10px 24px rgba(255, 23, 68, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.22);
   color: #fff;
-  font-size: 0.68rem;
+  font-size: 0.62rem;
   font-weight: 900;
-  letter-spacing: 0.02em;
+  letter-spacing: 0.01em;
   white-space: nowrap;
 }
 
@@ -109,13 +110,13 @@
 
 @media (max-width: 1180px) {
   .page-home .masthead-main {
-    grid-template-columns: 150px 1fr auto;
+    grid-template-columns: 130px minmax(0, 1fr) 145px;
     height: 64px;
   }
 
   .page-home .identity {
-    width: 116px;
-    height: 46px;
+    width: 104px;
+    height: 40px;
   }
 
   .page-home .site-nav {
@@ -127,10 +128,10 @@
   }
 
   .page-home .nav-cta {
-    min-width: 152px;
-    min-height: 38px;
-    padding: 0 14px;
-    font-size: 0.62rem;
+    min-width: 132px;
+    min-height: 36px;
+    padding: 0 12px;
+    font-size: 0.58rem;
   }
 }
 
@@ -141,8 +142,8 @@
   }
 
   .page-home .identity {
-    width: 112px;
-    height: 44px;
+    width: 106px;
+    height: 40px;
   }
 
   .industrial-hero {
