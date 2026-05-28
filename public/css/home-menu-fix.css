@@ -77,14 +77,18 @@
   white-space: nowrap;
 }
 
-/* HERO TELA INTEIRA */
+/* HERO domina a primeira dobra da tela */
 .page-home .industrial-hero {
+  display: flex;
   width: 100vw;
   max-width: none;
   min-height: calc(100vh - 86px);
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  padding-top: clamp(92px, 10vh, 124px);
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .page-home .industrial-hero-media {
@@ -98,7 +102,8 @@
   width: 100vw;
   max-width: none;
   object-fit: cover;
-  object-position: center center;
+  object-position: 64% center;
+  filter: saturate(1.22) contrast(1.14) brightness(1.06);
 }
 
 .page-home .industrial-hero-content,
@@ -111,6 +116,7 @@
 
 .page-home .industrial-hero-content {
   max-width: 1440px;
+  transform: translateY(-28px);
 }
 
 .page-home .industrial-hero h1 {
@@ -126,12 +132,17 @@
 }
 
 .page-home .industrial-qualities {
-  margin-top: clamp(42px, 5.5vh, 70px);
+  margin-top: 0;
+  transform: translateY(100px);
 }
 
 .page-home .industrial-qualities article {
   min-height: 106px;
   padding: 24px 26px;
+}
+
+.page-home .industrial-stats {
+  padding-top: 130px;
 }
 
 .page-home .industrial-qualities h2,
