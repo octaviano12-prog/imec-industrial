@@ -1,4 +1,4 @@
-/* Fine tuning for the premium home reference layout */
+/* Ajuste exclusivo do topo da home */
 .page-home {
   --shell: 1440px;
   --pad: clamp(20px, 3.2vw, 58px);
@@ -23,10 +23,12 @@
 }
 
 .page-home .identity {
+  display: flex;
   width: 82px;
   height: 32px;
-  display: flex;
   align-items: center;
+  padding: 0;
+  background: transparent;
 }
 
 .page-home .identity img {
@@ -46,50 +48,30 @@
   margin: 0;
   padding: 10px 0;
   font-size: 0.6rem;
-  letter-spacing: 0.05em;
   line-height: 1;
+  letter-spacing: 0.05em;
 }
 
-.page-home .nav-cta {
+.page-home .site-nav .nav-cta {
   display: none;
 }
 
 .page-home .nav-cta-outside {
-  justify-self: end;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
   width: 146px;
   height: 36px;
+  align-items: center;
+  justify-content: center;
+  justify-self: end;
   border-radius: 8px;
   background: linear-gradient(135deg, #ff214b 0%, #e11139 52%, #b30a29 100%);
+  box-shadow: 0 8px 18px rgba(255, 23, 68, 0.18);
   color: #fff;
   font-size: 0.55rem;
   font-weight: 900;
   letter-spacing: 0.01em;
   text-decoration: none;
-  box-shadow: 0 8px 18px rgba(255, 23, 68, 0.18);
-}
-
-.industrial-hero {
-  min-height: 590px;
-  max-height: 640px;
-  padding-top: 104px;
-}
-
-.industrial-hero-content,
-.industrial-hero h1 {
-  max-width: 780px;
-}
-
-.industrial-hero h1 {
-  font-size: clamp(3.3rem, 4.8vw, 5.45rem);
-  line-height: 0.94;
-}
-
-.industrial-lead {
-  max-width: 610px;
-  margin: 20px 0 26px;
+  white-space: nowrap;
 }
 
 @media (max-width: 1180px) {
