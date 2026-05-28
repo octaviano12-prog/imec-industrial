@@ -74,6 +74,30 @@
   white-space: nowrap;
 }
 
+/* HERO WIDESCREEN */
+.page-home .industrial-hero {
+  min-height: calc(100vh - 64px);
+  padding-top: clamp(100px, 12vh, 140px);
+}
+
+.page-home .industrial-hero-content {
+  max-width: 920px;
+}
+
+.page-home .industrial-hero h1 {
+  max-width: 920px;
+  font-size: clamp(4.4rem, 6vw, 7.8rem);
+}
+
+.page-home .industrial-lead {
+  max-width: 720px;
+  font-size: clamp(1rem, 1.2vw, 1.24rem);
+}
+
+.page-home .industrial-qualities {
+  margin-top: clamp(56px, 7vh, 90px);
+}
+
 @media (max-width: 1180px) {
   .page-home .masthead-main {
     grid-template-columns: 98px 1fr 132px;
