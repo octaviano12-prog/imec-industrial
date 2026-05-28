@@ -14,11 +14,13 @@
           <b>Menu</b>
         </button>
         <nav class="site-nav" id="site-nav" aria-label="Navegação principal">
+          <a class="<%= active === 'home' ? 'active' : '' %>" href="/">Home</a>
           <a class="<%= active === 'company' ? 'active' : '' %>" href="/empresa">Empresa</a>
           <a class="<%= active === 'solutions' ? 'active' : '' %>" href="/equipamentos">Equipamentos</a>
-          <a class="<%= active === 'services' ? 'active' : '' %>" href="/reformas-servicos">Reformas e Serviços</a>
+          <a class="<%= active === 'services' ? 'active' : '' %>" href="/reformas-servicos">Serviços</a>
           <a class="<%= active === 'markets' ? 'active' : '' %>" href="/setores-clientes">Setores</a>
           <a class="<%= active === 'projects' ? 'active' : '' %>" href="/projetos">Projetos</a>
+          <a class="<%= active === 'contact' ? 'active' : '' %>" href="/contato">Contato</a>
           <a class="nav-cta <%= active === 'contact' ? 'active' : '' %>" href="/contato">Solicite uma cotação</a>
         </nav>
       </div>
